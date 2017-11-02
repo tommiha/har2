@@ -7,16 +7,19 @@ class Test extends CI_Controller {
   }
 
   public function toinen(){
-    echo 'Tämä on Test Controllerin toinen metodi';
+    //echo 'Tämä on Test Controllerin toinen metodi';
+    echo site_url('test/toinen');
   }
   public function kolmas(){
     $data['etunimi']='Ville';
     $data['sukunimi']='Virta';
-    $this->load->view('test/kolmas',$data);
+    $data['sivu']='test/kolmas';
+    $this->load->view('menu/content',$data);
   }
   public function neljas(){
     $this->load->model('Test_model');
     $data['oppilaat']=$this->Test_model->hae_nimet();
-    $this->load->view('test/neljas',$data);
+    $data['sivu']='test/neljas';
+    $this->load->view('menu/content',$data);
   }
 }
