@@ -2,6 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Test extends CI_Controller {
+  parent::__construct();
+  if (isset($_SESSION['kirjautunut']) && $_SESSION['kirjautunut'] == true ){
+
+  }
+    else {
+      redirect('login/avaa_lomake');
+    }
+    
   public function index(){
     echo 'Tämä on Test Controllerin index metodi';
   }
