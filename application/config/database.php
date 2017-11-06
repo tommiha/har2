@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'mysli.oamk.fi',
-	'username' => 't5hato00',
-	'password' => 'Lgguft1234',
+	'hostname' => 'localhost',
+	'username' => 'webuser',
+	'password' => 'webpass',
 	'database' => 'opisk_t5hato00',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
